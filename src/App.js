@@ -21,6 +21,7 @@ import Payment from './Pages/Dashboard/Payment';
 import AddTreatment from './Pages/Dashboard/AddTreatment';
 import ManageTreatment from './Pages/Dashboard/ManageTreatment';
 import Contact from './Pages/Contact/Contact';
+import Review from './Pages/Review/Review';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="review" element={<Review />} />
         <Route path="appointment" element={
           <RequireAuth>
             <Appointment />
