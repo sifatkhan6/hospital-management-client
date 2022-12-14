@@ -9,7 +9,7 @@ const AddDoctor = () => {
 
     const { data: services, isLoading } = useQuery('services', () => fetch('http://localhost:5000/service').then(res => res.json()))
 
-    const imageStorageKey='4295ac4d47b569312bea67b440cdbdbb';
+    const imageStorageKey='485792a1d7f10ba04f80eed6eb2053db';
 
     /**
      * 3 ways to store images
@@ -68,8 +68,8 @@ const AddDoctor = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-2xl">Add a New Doctor</h2>
+        <div className='grid justify-items-center mt-6'>
+            <h2 className="text-2xl">Add New Doctor</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="form-control w-full max-w-xs">
@@ -78,7 +78,7 @@ const AddDoctor = () => {
                     </label>
                     <input
                         type="text"
-                        placeholder="Your Name"
+                        placeholder="Doctors Name"
                         className="input input-bordered w-full max-w-xs"
                         {...register("name", {
                             required: {
@@ -98,7 +98,7 @@ const AddDoctor = () => {
                     </label>
                     <input
                         type="email"
-                        placeholder="Your Email"
+                        placeholder="Doctors Email"
                         className="input input-bordered w-full max-w-xs"
                         {...register("email", {
                             required: {

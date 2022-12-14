@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 import CheckoutForm from './CheckoutForm';
 
-const stripePromise = loadStripe('pk_test_51KzgdMJVa6zVY99CaGts94G8qqJirQWPMAET7VBqrec0wWSxhuuRtgQNPA3SuwzjQKOv6QWwjgMWEfZ83N1qLNUU00IX1ciL6e');
+const stripePromise = loadStripe('pk_test_51L4GvhLCiBN04ZvjbKtEHcnhj9CHnZ6Lvp6aAHhBO8kdOC1vBCWXpt3vtPNIROtuzh2quFuQAI2sIc6XRy6sTvBh00J9MUM1bx');
 
 const Payment = () => {
     const { id } = useParams();
@@ -24,7 +24,7 @@ const Payment = () => {
     }
 
     return (
-        <div>
+        <div className='mx-20'>
             <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
                 <div class="card-body">
                     <p className="text-success font-bold">Hello, {appointment.patientName}</p>

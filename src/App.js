@@ -18,6 +18,9 @@ import AddDoctor from './Pages/Dashboard/AddDoctor';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import ManageDoctors from './Pages/Dashboard/ManageDoctors';
 import Payment from './Pages/Dashboard/Payment';
+import AddTreatment from './Pages/Dashboard/AddTreatment';
+import ManageTreatment from './Pages/Dashboard/ManageTreatment';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="appointment" element={
           <RequireAuth>
             <Appointment />
@@ -39,6 +43,8 @@ function App() {
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path="addDoctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
           <Route path="manageDoctor" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>}></Route>
+          <Route path="addTreatment" element={<RequireAdmin><AddTreatment></AddTreatment></RequireAdmin>}></Route>
+          <Route path="manageTreatment" element={<RequireAdmin><ManageTreatment></ManageTreatment></RequireAdmin>}></Route>
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
